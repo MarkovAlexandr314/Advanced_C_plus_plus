@@ -1,0 +1,10 @@
+NORMAL:  10:30:02 Messange number: 2
+NORMAL:  10:30:02 Messange number: 3
+NORMAL:  10:30:03 Messange number: 4
+NORMAL:  10:30:03 Messange number: 5
+NORMAL:  10:30:04 Messange number: 6
+NORMAL:  10:30:04 Messange number: 7
+NORMAL:  10:30:05 Messange number: 8
+NORMAL:  10:30:05 Messange number: 9
+WARNING: 10:30:06 WARNING!
+ERROR:   10:30:06 error happens! help me !

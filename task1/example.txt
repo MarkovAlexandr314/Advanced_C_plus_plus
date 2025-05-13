@@ -1,0 +1,18 @@
+createUser 1 Alex markov
+createUser 2 Ivan ivanov
+createGroup 1
+createGroup 2
+addUserToGroup 1 1
+addUserToGroup 2 1
+addUserToGroup 2 2
+getUser 1
+getGroup 2
+allUsers
+allGroups
+deleteUser 2
+allUsers
+allGroups
+deleteGroup 1
+allUsers
+allGroups
+exit
