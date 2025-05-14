@@ -6,8 +6,8 @@
 template <class T>
 class Counter
 {
-public:
     static size_t counter;
+public:
 
     Counter() { counter++; }
     static size_t count() { return counter; }

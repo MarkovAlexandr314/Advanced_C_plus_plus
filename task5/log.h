@@ -5,7 +5,7 @@
 #ifndef LOGH
 #define LOGH
 
-enum LogLevel
+enum class LogLevel
 {
     LOG_NORMAL,
     LOG_WARNING,
@@ -20,7 +20,7 @@ public:
     {
         std::time_t time;
         std::string mgs;
-        int lvl;
+        LogLevel lvl;
     };
     static Log *Instance()
     {
@@ -28,7 +28,7 @@ public:
             loger_prt = new Log();
         return loger_prt;
     }
-    void message(int, std::string);
+    void message(LogLevel, std::string);
     void print();
 
 private:
@@ -73,7 +73,7 @@ std::ostream &operator<<(std::ostream &stream, const Log::LogMessange &lm)
     return stream;
 }
 
-void Log::message(int lvl, std::string msg)
+void Log::message(LogLevel lvl, std::string msg)
 {
     if (msg_queue.size() < msg_capacity)
     {
