@@ -1,4 +1,5 @@
 #include <cstdint>
+#include <type_traits>
 #ifndef TYPELISTH
 #define TYPELISTH
 namespace detail
