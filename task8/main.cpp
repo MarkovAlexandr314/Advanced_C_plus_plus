@@ -16,7 +16,7 @@ class Constant : public Expression {
     friend class ExpressionFactory;
 
 public:
-    explicit Constant(int v) : value(v) {}
+    Constant(int v) : value(v) {}
     int calculate(const std::map<std::string, int>&) const override
     {
         return value;
@@ -32,7 +32,7 @@ class Variable : public Expression {
     friend class ExpressionFactory;
 
 public:
-    explicit Variable(std::string n) : name(std::move(n)) {}
+    Variable(std::string n) : name(n) {}
     int calculate(const std::map<std::string, int>& context) const override
     {
         auto it = context.find(name);
@@ -120,7 +120,7 @@ public:
     // Проверяем, не устарела ли запись для текущего ключа
     if (auto it = variables.find(name); it != variables.end()) {
         if (it->second.expired()) {
-            variables.erase(it); // Удаляем невалидный weak_ptr
+            variables.erase(it);
         }
     }
 
